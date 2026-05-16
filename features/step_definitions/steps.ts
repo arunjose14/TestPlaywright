@@ -15,7 +15,6 @@ Given('User logs in with valid creds', async function logintoApp() {
     await loginpage.login(testdata.userName, testdata.password);
 
 
-
 });
 
 
