@@ -1,7 +1,11 @@
+import {Page ,Locator} from "@playwright/test"
 export class MyOrderspage
 {
+ page:Page;
+ orders:Locator;
+ orderrows:Locator;
 
-    constructor(page)
+    constructor(page:Page)
     {
         this.page=page
         this.orders = page.locator("label[routerlink*='/dashboard/myorders']")
@@ -15,7 +19,7 @@ export class MyOrderspage
         await this.orders.click()
     }
 
-    async deleteOrder(orderid)
+    async deleteOrder(orderid:string)
     {
 
         await this.page.locator(".thead-dark").waitFor()
