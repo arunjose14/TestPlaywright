@@ -22,4 +22,4 @@ When('User adds the item {string} to cart', async function (string) {
     await db.addProductToCart(string)
     // go to cart page
     await db.goToCartPage()
-});
+}); 
